@@ -32,8 +32,7 @@ spec:
           ports:
             - containerPort: 9999
           livenessProbe:
-            httpGet:
-              path: /metric
+            tcpSocket:
               port: 9999
             initialDelaySeconds: 30
             timeoutSeconds: 20
