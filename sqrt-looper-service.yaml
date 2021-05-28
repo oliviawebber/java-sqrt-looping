@@ -28,7 +28,8 @@ spec:
     spec:
       containers:
         - name: sqrtLooper
-          image: danielbryantuk/djshopfront:latest
+          image: webberlh/sqrt-looper
+          imagePullPolicy: Never
           ports:
             - containerPort: 9999
           livenessProbe:
