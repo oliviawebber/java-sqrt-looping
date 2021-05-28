@@ -19,8 +19,8 @@ public class Client {
     public static void main(String[] args) throws IOException, InterruptedException {
         SqrtLooper sl1 = new SqrtLooper();
         SqrtLooper sl2 = new SqrtLooper();
-        sl1.setPriority(3);
-        sl2.setPriority(3);
+        sl1.setPriority(Thread.MIN_PRIORITY);
+        sl2.setPriority(Thread.MIN_PRIORITY);
         HttpServer server = HttpServer.create(new InetSocketAddress(Inet4Address.getLocalHost().getHostAddress(),9999),0);
         server.createContext("/metric", new MetricHandler());
         ThreadPoolExecutor threadPoolExecutor = (ThreadPoolExecutor) Executors.newFixedThreadPool(2);
