@@ -28,8 +28,7 @@ spec:
     spec:
       containers:
         - name: sqrt-looper
-          image: webberlh/sqrt-looper
-          imagePullPolicy: Never
+          image: 10.0.0.100:5000/webberlh/sqrt-looper:latest
           ports:
             - containerPort: 9999
           livenessProbe:
