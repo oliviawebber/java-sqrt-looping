@@ -27,7 +27,7 @@ spec:
         app: sqrt-looper
     spec:
       containers:
-        - name: sqrtLooper
+        - name: sqrt-looper
           image: webberlh/sqrt-looper
           imagePullPolicy: Never
           ports:
