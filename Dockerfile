@@ -1,6 +1,5 @@
-FROM openjdk:8-jre
-ADD build/Client.class Client.class
-ADD build/MetricHandler.class MetricHandler.class
-ADD build/SqrtLooper.class SqrtLooper.class
+FROM openjdk:8-jdk
+COPY ./src/main/java /app
 EXPOSE 9999
+RUN javac /app/*.java
 ENTRYPOINT ["java","Client"]
