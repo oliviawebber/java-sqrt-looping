@@ -26,6 +26,7 @@ spec:
       labels:
         app: sqrt-looper
     spec:
+      schedulerName: extended-default-scheduler
       containers:
         - name: sqrt-looper
           image: 10.0.0.100:5000/webberlh/sqrt-looper:latest
